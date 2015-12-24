@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.75"
+    ComputedModelVersion    "1.77"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,9 +26,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Jakub"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Dec 11 11:44:23 2015"
-  RTWModifiedTimeStamp	  371733932
-  ModelVersionFormat	  "1.%<AutoIncrement:75>"
+  LastModifiedDate	  "Thu Dec 24 10:33:08 2015"
+  RTWModifiedTimeStamp	  372852864
+  ModelVersionFormat	  "1.%<AutoIncrement:77>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -65,6 +65,7 @@ Model {
     $ObjectID		    1
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "balon_model"
+    signals_		    []
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
@@ -130,7 +131,7 @@ Model {
 	  $ObjectID		  3
 	  Version		  "1.11.0"
 	  StartTime		  "0.0"
-	  StopTime		  "6000"
+	  StopTime		  "10000"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -813,7 +814,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "97"
+    SIDHighWatermark	    "104"
     Block {
       BlockType		      Constant
       Name		      "Constant"
@@ -1224,6 +1225,114 @@ Model {
     }
     Block {
       BlockType		      Scope
+      Name		      "Scope10"
+      SID		      "98"
+      Ports		      [1]
+      Position		      [1175, 974, 1205, 1006]
+      Floating		      off
+      Location		      [198, 91, 609, 388]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData10"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope11"
+      SID		      "99"
+      Ports		      [1]
+      Position		      [1000, 979, 1030, 1011]
+      Floating		      off
+      Location		      [198, 91, 609, 388]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData11"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope12"
+      SID		      "100"
+      Ports		      [1]
+      Position		      [890, 804, 920, 836]
+      Floating		      off
+      Location		      [198, 91, 609, 388]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData12"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope13"
+      SID		      "101"
+      Ports		      [1]
+      Position		      [890, 1009, 920, 1041]
+      Floating		      off
+      Location		      [198, 91, 609, 388]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData13"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope14"
+      SID		      "102"
+      Ports		      [1]
+      Position		      [485, 914, 515, 946]
+      Floating		      off
+      Location		      [198, 91, 609, 388]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData14"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope15"
+      SID		      "104"
+      Ports		      [1]
+      Position		      [810, 2084, 840, 2116]
+      Floating		      off
+      Location		      [198, 91, 707, 388]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData15"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
       Name		      "Scope2"
       SID		      "17"
       Ports		      [1]
@@ -1267,7 +1376,7 @@ Model {
       Ports		      [1]
       Position		      [1225, 2044, 1255, 2076]
       Floating		      off
-      Location		      [198, 91, 609, 388]
+      Location		      [198, 91, 707, 388]
       Open		      off
       NumInputPorts	      "1"
       List {
@@ -1434,7 +1543,7 @@ Model {
       Position		      [620, 1485, 670, 1535]
       ShowName		      off
       IconShape		      "round"
-      Inputs		      "|++"
+      Inputs		      "|-+"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -1511,7 +1620,7 @@ Model {
       BlockType		      Constant
       Name		      "gestosc powietrza\nna poziomie morza przy \ntemp 20 *C"
       SID		      "91"
-      Position		      [410, 980, 440, 1010]
+      Position		      [405, 980, 435, 1010]
       Value		      "ro0"
     }
     Block {
@@ -1666,15 +1775,15 @@ Model {
       Labels		      [0, 0; 0, 0]
       SrcBlock		      "Math\nFunction1"
       SrcPort		      1
-      Points		      [55, 0]
+      Points		      [70, 0]
       Branch {
 	DstBlock		"Sum1"
 	DstPort			1
       }
       Branch {
-	Points			[0, 75]
-	DstBlock		"Fwypadkowa/masa [ m / s^2 ]"
-	DstPort			2
+	Points			[0, 80]
+	DstBlock		"Scope14"
+	DstPort			1
       }
     }
     Line {
@@ -1689,8 +1798,16 @@ Model {
       Labels		      [0, 0; 0, 0]
       SrcBlock		      "Sum1"
       SrcPort		      1
-      DstBlock		      "F = mbalonu * g"
-      DstPort		      2
+      Points		      [30, 0]
+      Branch {
+	DstBlock		"F = mbalonu * g"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 75]
+	DstBlock		"Fwypadkowa/masa [ m / s^2 ]"
+	DstPort			2
+      }
     }
     Line {
       SrcBlock		      "From2"
@@ -1712,20 +1829,22 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "F = mbalonu * g"
       SrcPort		      1
-      Points		      [120, 0; 0, 55]
-      DstBlock		      "Sum2"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "gestosc powietrza\nna aktualnej wysokosci "
-      SrcPort		      1
-      DstBlock		      "Fw = ro * g * V"
-      DstPort		      1
+      Points		      [65, 0]
+      Branch {
+	Points			[55, 0; 0, 55]
+	DstBlock		"Sum2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -25]
+	DstBlock		"Scope12"
+	DstPort			1
+      }
     }
     Line {
       SrcBlock		      "Objetosc koperty\nbalonu"
       SrcPort		      1
-      Points		      [275, 0; 0, -60]
+      Points		      [270, 0; 0, -60]
       DstBlock		      "Fw = ro * g * V"
       DstPort		      3
     }
@@ -1734,26 +1853,50 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "Fw = ro * g * V"
       SrcPort		      1
-      Points		      [120, 0; 0, -65]
-      DstBlock		      "Sum2"
-      DstPort		      2
+      Points		      [65, 0]
+      Branch {
+	Points			[55, 0; 0, -65]
+	DstBlock		"Sum2"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 45]
+	DstBlock		"Scope13"
+	DstPort			1
+      }
     }
     Line {
       Name		      "sila wypadkowa [ N ]"
       Labels		      [0, 0; 0, 0]
       SrcBlock		      "Sum2"
       SrcPort		      1
-      DstBlock		      "Fwypadkowa/masa [ m / s^2 ]"
-      DstPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Fwypadkowa/masa [ m / s^2 ]"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 95]
+	DstBlock		"Scope11"
+	DstPort			1
+      }
     }
     Line {
       Name		      "przyspieszenie\npowstale w wyniku sily\nwyporu i ciezkosci [ m / s^2 ]"
       Labels		      [0, 0]
       SrcBlock		      "Fwypadkowa/masa [ m / s^2 ]"
       SrcPort		      1
-      Points		      [120, 0; 0, 225; -905, 0; 0, 110]
-      DstBlock		      "a * dt = dv"
-      DstPort		      1
+      Points		      [30, 0]
+      Branch {
+	Points			[90, 0; 0, 225; -905, 0; 0, 110]
+	DstBlock		"a * dt = dv"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 75]
+	DstBlock		"Scope10"
+	DstPort			1
+      }
     }
     Line {
       SrcBlock		      "Gain4"
@@ -1775,11 +1918,6 @@ Model {
       SrcBlock		      "v * dt = dh"
       SrcPort		      1
       Points		      [115, 0]
-      Branch {
-	Points			[0, -55; -285, 0]
-	DstBlock		"jesli jestesmy na wysokosci\ndodatniej, to mozemy opasc\nlub sie wzniesc"
-	DstPort			2
-      }
       Branch {
 	Points			[375, 0; 0, 185; -135, 0]
 	Branch {
@@ -1806,6 +1944,11 @@ Model {
 	  DstBlock		  "Scope9"
 	  DstPort		  1
 	}
+      }
+      Branch {
+	Points			[0, -55; -285, 0]
+	DstBlock		"jesli jestesmy na wysokosci\ndodatniej, to mozemy opasc\nlub sie wzniesc"
+	DstPort			2
       }
     }
     Line {
@@ -1989,9 +2132,17 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "Math\nFunction3"
       SrcPort		      1
-      Points		      [25, 0; 0, -40]
-      DstBlock		      "Product1"
-      DstPort		      2
+      Points		      [20, 0]
+      Branch {
+	Points			[5, 0; 0, -40]
+	DstBlock		"Product1"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 55]
+	DstBlock		"Scope15"
+	DstPort			1
+      }
     }
     Line {
       Name		      "ro = (aktualneCisnienie * masaMolowaPow)\n/ (stalaR * aktualnaTemp)"
@@ -2050,6 +2201,13 @@ Model {
 	DstBlock		"Scope5"
 	DstPort			1
       }
+    }
+    Line {
+      SrcBlock		      "gestosc powietrza\nna poziomie morza przy \ntemp 20 *C"
+      SrcPort		      1
+      Points		      [140, 0; 0, -25]
+      DstBlock		      "Fw = ro * g * V"
+      DstPort		      1
     }
     Annotation {
       Position		      [1260, 467]
