@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.82"
+    ComputedModelVersion    "1.81"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,9 +26,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Jakub"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Dec 24 21:50:49 2015"
+  LastModifiedDate	  "Thu Dec 24 21:47:41 2015"
   RTWModifiedTimeStamp	  372892216
-  ModelVersionFormat	  "1.%<AutoIncrement:82>"
+  ModelVersionFormat	  "1.%<AutoIncrement:81>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
