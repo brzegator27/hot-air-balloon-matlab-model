@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.82"
+    ComputedModelVersion    "1.86"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,9 +26,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Jakub"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Dec 24 21:50:49 2015"
+  LastModifiedDate	  "Thu Dec 24 22:32:04 2015"
   RTWModifiedTimeStamp	  372892216
-  ModelVersionFormat	  "1.%<AutoIncrement:82>"
+  ModelVersionFormat	  "1.%<AutoIncrement:86>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -130,7 +130,7 @@ Model {
 	  $ObjectID		  3
 	  Version		  "1.11.0"
 	  StartTime		  "0.0"
-	  StopTime		  "10000"
+	  StopTime		  "3600"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -813,7 +813,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "116"
+    SIDHighWatermark	    "121"
     Block {
       BlockType		      Constant
       Name		      "Constant"
@@ -904,8 +904,8 @@ Model {
       BlockType		      Gain
       Name		      "Gain"
       SID		      "8"
-      Position		      [525, 434, 590, 486]
-      Gain		      "P/Cw"
+      Position		      [475, 433, 595, 487]
+      Gain		      "P*sprP/Cw"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -914,7 +914,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain1"
       SID		      "11"
-      Position		      [350, 638, 435, 702]
+      Position		      [490, 643, 575, 707]
       BlockMirror	      on
       NamePlacement	      "alternate"
       Gain		      "R/(Mp*p0)"
@@ -953,31 +953,6 @@ Model {
 	RTWStorageClass		"Auto"
 	DataLoggingNameMode	"SignalName"
       }
-    }
-    Block {
-      BlockType		      Gain
-      Name		      "Gain3"
-      SID		      "23"
-      Position		      [815, 441, 870, 479]
-      Gain		      "sprP"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-      Port {
-	PortNumber		1
-	Name			"temperatura, ktora\ndociera do balonu\n- chodzi o sprawnosc\npalnika"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Gain
-      Name		      "Gain4"
-      SID		      "39"
-      Position		      [1010, 442, 1060, 478]
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Gain
@@ -1031,7 +1006,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain9"
       SID		      "110"
-      Position		      [950, 1998, 1070, 2042]
+      Position		      [905, 1998, 1025, 2042]
       Gain		      "ro0"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -1075,9 +1050,10 @@ Model {
       SID		      "3"
       Ports		      [1, 1]
       Position		      [695, 445, 725, 475]
+      InitialCondition	      "T0"
       Port {
 	PortNumber		1
-	Name			"dostarczona temp [ K ]"
+	Name			"temp powietrza w balonie [ K ]"
 	RTWStorageClass		"Auto"
 	DataLoggingNameMode	"SignalName"
       }
@@ -1117,7 +1093,7 @@ Model {
       Name		      "Math\nFunction4"
       SID		      "115"
       Ports		      [2, 1]
-      Position		      [870, 2002, 900, 2033]
+      Position		      [795, 2002, 825, 2033]
       Operator		      "pow"
     }
     Block {
@@ -1158,7 +1134,7 @@ Model {
       Name		      "Scope"
       SID		      "1"
       Ports		      [1]
-      Position		      [1240, 444, 1270, 476]
+      Position		      [915, 389, 945, 421]
       Floating		      off
       Location		      [198, 91, 609, 388]
       Open		      off
@@ -1302,7 +1278,7 @@ Model {
       Name		      "Scope2"
       SID		      "17"
       Ports		      [1]
-      Position		      [484, 380, 516, 410]
+      Position		      [429, 380, 461, 410]
       BlockRotation	      270
       Floating		      off
       Location		      [174, 390, 576, 664]
@@ -1427,27 +1403,6 @@ Model {
     }
     Block {
       BlockType		      Sum
-      Name		      "Sum"
-      SID		      "9"
-      Ports		      [2, 1]
-      Position		      [775, 645, 825, 695]
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|++"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-      Port {
-	PortNumber		1
-	Name			"temp powietrza w balonie [ K ]"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Sum
       Name		      "Sum1"
       SID		      "25"
       Ports		      [2, 1]
@@ -1533,10 +1488,26 @@ Model {
       Name		      "Sum6"
       SID		      "111"
       Ports		      [2, 1]
-      Position		      [635, 1985, 685, 2035]
+      Position		      [615, 1985, 665, 2035]
       ShowName		      off
       IconShape		      "round"
       Inputs		      "|-+"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum7"
+      SID		      "117"
+      Ports		      [2, 1]
+      Position		      [895, 585, 945, 635]
+      BlockRotation	      270
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|+-"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -1608,6 +1579,20 @@ Model {
       Value		      "mb"
     }
     Block {
+      BlockType		      Product
+      Name		      "oddana temperatura"
+      SID		      "119"
+      Ports		      [2, 1]
+      Position		      [1052, 560, 1083, 590]
+      BlockRotation	      270
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      Inputs		      "*/"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
       BlockType		      Constant
       Name		      "powierzchnia Ziemii"
       SID		      "51"
@@ -1633,16 +1618,26 @@ Model {
       BlockType		      Constant
       Name		      "stala do rownania2"
       SID		      "112"
-      Position		      [645, 2060, 675, 2090]
+      Position		      [625, 2060, 655, 2090]
       BlockRotation	      270
     }
     Block {
       BlockType		      Constant
       Name		      "stala do rownania4"
       SID		      "114"
-      Position		      [743, 2110, 907, 2140]
+      Position		      [668, 2110, 832, 2140]
       BlockRotation	      270
       Value		      "1+(g*Mp)/(R*spadekTemp)"
+    }
+    Block {
+      BlockType		      From
+      Name		      "temperatura powietrza\nna aktualnej wysokosci"
+      SID		      "120"
+      Position		      [1093, 400, 1217, 440]
+      BlockRotation	      270
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      GotoTag		      "aktualnaTemp"
     }
     Block {
       BlockType		      Integrator
@@ -1657,13 +1652,41 @@ Model {
 	DataLoggingNameMode	"SignalName"
       }
     }
+    Block {
+      BlockType		      Gain
+      Name		      "wspolczynnik\nwymiany\nciepla"
+      SID		      "121"
+      Position		      [997, 485, 1123, 525]
+      BlockRotation	      270
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      Gain		      "kWymianyCiepla"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
     Line {
-      Name		      "dostarczona temp [ K ]"
+      Name		      "temp powietrza w balonie [ K ]"
       Labels		      [0, 0]
       SrcBlock		      "Integrator dT / dt = P / ( Cw * m)"
       SrcPort		      1
-      DstBlock		      "Gain3"
-      DstPort		      1
+      Points		      [170, 0]
+      Branch {
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[20, 0]
+	Branch {
+	  DstBlock		  "Sum7"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [140, 0]
+	  DstBlock		  "wspolczynnik\nwymiany\nciepla"
+	  DstPort		  1
+	}
+      }
     }
     Line {
       SrcBlock		      "Gain"
@@ -1672,33 +1695,11 @@ Model {
       DstPort		      1
     }
     Line {
-      Name		      "temp powietrza w balonie [ K ]"
-      Labels		      [0, 0]
-      SrcBlock		      "Sum"
-      SrcPort		      1
-      Points		      [-205, 0]
-      Branch {
-	Points			[0, 40]
-	DstBlock		"Scope1"
-	DstPort			1
-      }
-      Branch {
-	DstBlock		"Gain1"
-	DstPort			1
-      }
-    }
-    Line {
-      SrcBlock		      "Constant - temp. poczatkowa\npowietrza w balonie"
-      SrcPort		      1
-      DstBlock		      "Sum"
-      DstPort		      2
-    }
-    Line {
       Name		      "odwrotnosc gestosci \npowietrzaw balonie [ m^3 / kg ]"
       Labels		      [0, 0]
       SrcBlock		      "Gain1"
       SrcPort		      1
-      Points		      [-155, 0; 0, -55]
+      Points		      [-295, 0; 0, -60]
       Branch {
 	Points			[0, -155]
 	DstBlock		"Gain2"
@@ -1717,7 +1718,7 @@ Model {
       SrcPort		      1
       Points		      [30, 0]
       Branch {
-	Points			[165, 0]
+	Points			[110, 0]
 	Branch {
 	  DstBlock		  "Gain"
 	  DstPort		  1
@@ -1737,14 +1738,6 @@ Model {
       SrcPort		      1
       DstBlock		      "Math\nFunction1"
       DstPort		      2
-    }
-    Line {
-      Name		      "temperatura, ktora\ndociera do balonu\n- chodzi o sprawnosc\npalnika"
-      Labels		      [0, 0]
-      SrcBlock		      "Gain3"
-      SrcPort		      1
-      DstBlock		      "Gain4"
-      DstPort		      1
     }
     Line {
       Name		      "masa powietrza w balonie\n[ kg ]"
@@ -1871,20 +1864,6 @@ Model {
       Branch {
 	Points			[0, 75]
 	DstBlock		"Scope10"
-	DstPort			1
-      }
-    }
-    Line {
-      SrcBlock		      "Gain4"
-      SrcPort		      1
-      Points		      [145, 0]
-      Branch {
-	DstBlock		"Scope"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, 210]
-	DstBlock		"Sum"
 	DstPort			1
       }
     }
@@ -2124,7 +2103,7 @@ Model {
     Line {
       SrcBlock		      "Gain9"
       SrcPort		      1
-      Points		      [5, 0]
+      Points		      [50, 0]
       Branch {
 	DstBlock		"Goto4"
 	DstPort			1
@@ -2172,14 +2151,47 @@ Model {
       Points		      [30, 0; 0, -160]
     }
     Line {
+      SrcBlock		      "Sum7"
+      SrcPort		      1
+      Points		      [0, 35; -280, 0]
+      Branch {
+	DstBlock		"Gain1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Scope1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "oddana temperatura"
+      SrcPort		      1
+      Points		      [0, 15]
+      DstBlock		      "Sum7"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "wspolczynnik\nwymiany\nciepla"
+      SrcPort		      1
+      DstBlock		      "oddana temperatura"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "temperatura powietrza\nna aktualnej wysokosci"
+      SrcPort		      1
+      Points		      [0, 100]
+      DstBlock		      "oddana temperatura"
+      DstPort		      2
+    }
+    Line {
       SrcBlock		      "gestosc powietrza\nna poziomie morza przy \ntemp 20 *C"
       SrcPort		      1
-      Points		      [140, 0; 0, -25]
+      Points		      [155, 0; 0, -25]
       DstBlock		      "Fw = ro * g * V"
       DstPort		      1
     }
     Annotation {
-      Position		      [1260, 467]
+      Position		      [995, 467]
     }
     Annotation {
       Name		      "Fwypadkowa =\nFwyp - Fciezkosci"

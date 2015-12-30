@@ -1,0 +1,84 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage[utf8x]{inputenc}
+\usepackage{microtype}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[]{mathtools}
+\usepackage[]{amssymb}
+\usepackage[]{physics}
+
+\title{Model lotu balonu - wzory\\ analiza numeryczna}
+\author{Jakub Brzegowski}
+\date{Grudzień 2015}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{2em}
+
+\begin{document}
+\maketitle
+
+\section{Użyte wzory:}
+
+Obliczanie przyrostu temperatury:
+\[
+    \dv{T}{t} = \frac{P}{C_w \cdot m}
+\]
+$T$ - temateratura ośrodka, \\
+$t$ - czas, \\
+$P$ - moc, \\
+$C_w$ - ciepło właściwe, \\
+$m$ - masa
+
+\noindent \rule{16cm}{2pt}
+
+Zależność ciśnienia od wysokości:
+\[
+    p = p_0 \left( 1 - \frac{L\, h}{T_0} \right)
+\]
+
+\noindent \rule{16cm}{2pt}
+
+Siła oporu powietrza:
+\[
+    F_D = \tfrac{1}{2}\, \rho\, v^2\, C_D\, A
+\]
+$F_D$ - siła oporu aerodynamicznego \\
+$\rho$ - gęstość ośrodka \\
+$v^2$ - prędkość obiektu relatywna do ośrodka \\
+$C_D$ - współczynnik oporu aerodynamicznego \\
+$A$ - pole przekroju \\
+
+\noindent \rule{16cm}{2pt}
+
+\[
+    n = \frac{m}{M}
+\]
+$n$ - liczba moli, \\
+$m$ - masa substancji, \\
+$M$ - masa cząsteczkowa(masa molowa) danej substancji.
+
+\noindent \rule{16cm}{2pt}
+
+Z równania Clapeyrona:
+\[
+    p\, v = n\, R\, T \\
+\]
+\[
+    p\, \frac{m}{g} = \frac{m}{M}\, R\, T \\
+\]
+\[
+    \rho = \frac{p\, M}{R\, T}
+\]
+$m$ - masa substancji, \\
+$p$ - ciśnienie, \\
+$v$ - objętość, \\
+$\rho$ - gęstość, \\
+$n$ - liczba moli gazu, będąca miarą liczby jego cząsteczek; $n = v/V$, \\
+$T$ – temperatura bezwzględna, $T\, [K]  = t\, [^{\circ}C] + 273,15$ \\
+$R$ – uniwersalna stała gazowa: $R = NAkB$, gdzie: $NA$ – stała Avogadra (liczba Avogadra), $kB$ – stała Boltzmanna, $R = 8,314\; \frac{J}{(mol \cdot K)}$
+
+\noindent \rule{16cm}{2pt}
+
+\end{document}
