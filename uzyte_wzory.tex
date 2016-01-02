@@ -9,6 +9,17 @@
 \usepackage[]{amssymb}
 \usepackage[]{physics}
 
+\usepackage{array} % I use it for tabular tag.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We can achieve alignment of dashes in equations variables descriptions by this code:
+%
+% \begin{tabular}{>{$}r<{$}@{\ --\ }l}
+% <Variable> & <Variable description>, \\
+% \end{tabular}
+%
+% Source: http://tex.stackexchange.com/questions/214925/center-hyphen-between-words
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \title{Model lotu balonu - wzory\\ analiza numeryczna}
 \author{Jakub Brzegowski}
 \date{Grudzień 2015}
@@ -21,47 +32,84 @@
 
 \section{Użyte wzory:}
 
+Siła ciężkości:
+\[
+    F_g = m \cdot g
+\]
+\begin{tabular}{>{$}r<{$}@{\ --\ }l}
+    F_g     & siła ciężkości, \\
+    m       & masa ciała, \\
+    g       & przyspieszenie grawitacyjne. \\
+\end{tabular}
+
+\noindent \rule{16cm}{2pt}
+
+
+
+Przyspieszenie(w ruchu prostoliniowym):
+\[
+    a = \dv{v}{t}
+\]
+\begin{tabular}{>{$}r<{$}@{\ --\ }l}
+    a       & przyspieszenie, \\
+    v       & szybkość ciała, \\
+    t       & czas. \\
+\end{tabular}
+
+\noindent \rule{16cm}{2pt}
+
+
+
+Prędkość chwilowa:
+\[
+    v = \dv{s}{t}
+\]
+\begin{tabular}{>{$}r<{$}@{\ --\ }l}
+    v       & prędkość, \\
+    s       & droga, \\
+    t       & czas, \\
+\end{tabular} \\
+skąd:
+\[
+    s=\int\limits_{t_0}^{t_1} \operatorname ds =\int\limits_{t_0}^{t_1} v(t) \operatorname{dt} \text{.}
+\]
+
+\noindent \rule{16cm}{2pt} 
+
+
+
 Obliczanie przyrostu temperatury:
 \[
     \dv{T}{t} = \frac{P}{C_w \cdot m}
 \]
-$T$ - temateratura ośrodka, \\
-$t$ - czas, \\
-$P$ - moc, \\
-$C_w$ - ciepło właściwe, \\
-$m$ - masa
+\begin{tabular}{>{$}r<{$}@{\ --\ }l}
+    T       & temateratura ośrodka, \\
+    t       & czas, \\
+    P       & moc, \\
+    C_w     & ciepło właściwe, \\
+    m       & masa.
+\end{tabular}
 
 \noindent \rule{16cm}{2pt}
 
-Zależność ciśnienia od wysokości:
-\[
-    p = p_0 \left( 1 - \frac{L\, h}{T_0} \right)
-\]
 
-\noindent \rule{16cm}{2pt}
 
-Siła oporu powietrza:
-\[
-    F_D = \tfrac{1}{2}\, \rho\, v^2\, C_D\, A
-\]
-$F_D$ - siła oporu aerodynamicznego \\
-$\rho$ - gęstość ośrodka \\
-$v^2$ - prędkość obiektu relatywna do ośrodka \\
-$C_D$ - współczynnik oporu aerodynamicznego \\
-$A$ - pole przekroju \\
-
-\noindent \rule{16cm}{2pt}
-
+Zależność pomiędzy liczbą moli, a masą i masą cząsteczkową substancji:
 \[
     n = \frac{m}{M}
 \]
-$n$ - liczba moli, \\
-$m$ - masa substancji, \\
-$M$ - masa cząsteczkowa(masa molowa) danej substancji.
+\begin{tabular}{>{$}r<{$}@{\ --\ }l}
+    n       & liczba moli, \\
+    m       & masa substancji, \\
+    M       & masa cząsteczkowa(masa molowa) danej substancji.
+\end{tabular}
 
 \noindent \rule{16cm}{2pt}
 
-Z równania Clapeyrona:
+
+
+Gęstość powietrza w kopercie balonu: \\
+z równania Clapeyrona mamy:
 \[
     p\, v = n\, R\, T \\
 \]
@@ -71,14 +119,67 @@ Z równania Clapeyrona:
 \[
     \rho = \frac{p\, M}{R\, T}
 \]
-$m$ - masa substancji, \\
-$p$ - ciśnienie, \\
-$v$ - objętość, \\
-$\rho$ - gęstość, \\
-$n$ - liczba moli gazu, będąca miarą liczby jego cząsteczek; $n = v/V$, \\
-$T$ – temperatura bezwzględna, $T\, [K]  = t\, [^{\circ}C] + 273,15$ \\
-$R$ – uniwersalna stała gazowa: $R = NAkB$, gdzie: $NA$ – stała Avogadra (liczba Avogadra), $kB$ – stała Boltzmanna, $R = 8,314\; \frac{J}{(mol \cdot K)}$
+\begin{tabular}{>{$}r<{$}@{\ --\ }l}
+    m       & masa substancji, \\
+    p       & ciśnienie, \\
+    v       & objętość, \\
+    \rho    & gęstość, \\
+    n       & liczba moli gazu, będąca miarą liczby jego cząsteczek; $n = v/V$, \\
+    T       & temperatura bezwzględna, $T\, [K]  = t\, [^{\circ}C] + 273,15$ \\
+    R       & uniwersalna stała gazowa: $R = NAkB$, gdzie: $NA$ – stała Avogadra (liczba Avogadra), $kB$ – stała Boltzmanna, $R = 8,314\; \frac{J}{(mol \cdot K)}$. \\
+\end{tabular}
 
 \noindent \rule{16cm}{2pt}
+
+
+
+Siła wyporu:
+\[
+    F_w = \rho \cdot g \cdot V
+\]
+\begin{tabular}{>{$}r<{$}@{\ --\ }l}
+    F_w     & siła wyporu, \\
+    \rho    & gęstość cieczy lub gazu, w którym znajduje się ciało, \\
+    g       & przyspieszenie grawitacyjne, \\
+    V       & objętość wypieranego płynu równa objętości części ciała zanurzonego w ośrodku. \\
+\end{tabular}
+
+\noindent \rule{16cm}{2pt}
+
+
+
+Zależność ciśnienia od wysokości:
+\[
+    p = p_0 \cdot \left( 1 - \frac{L \cdot h}{T_0} \right)^{\frac{g \cdot M}{R \cdot L}}
+\]
+\begin{tabular}{>{$}r<{$}@{\ --\ }l}
+    p_0     & standardowe ciśnienie atmosferyczne na poziomie morza, \\
+    L       & gradient adiabatyczny temperatury, \\
+    h       & wysokość nad poziomem morza, \\
+    T_0     & standardowa temateratura na poziomie morza, \\
+    g       & przyspieszenie ziemskie, \\
+    M       & masa molowa suchego powietrza, \\
+    R       & uniwersalna stała gazowa. \\
+\end{tabular}
+
+\noindent \rule{16cm}{2pt}
+
+
+
+Siła oporu powietrza:
+\[
+    F_D = \tfrac{1}{2}\, \rho\, v^2\, C_D\, A
+\]
+\begin{tabular}{>{$}r<{$}@{\ --\ }l}
+    F_D     & siła oporu aerodynamicznego, \\
+    \rho    & gęstość ośrodka, \\
+    v^2     & prędkość obiektu relatywna do ośrodka, \\
+    C_D     & współczynnik oporu aerodynamicznego, \\
+    A       & pole przekroju.
+\end{tabular}
+
+\noindent \rule{16cm}{2pt}
+
+
 
 \end{document}
