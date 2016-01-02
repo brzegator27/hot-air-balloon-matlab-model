@@ -17,6 +17,8 @@ spadekTemp = 0.0065; %Wspó³czynnik spadku temperatury w zale¿noœci od wysokoœci 
 g = 9.80665; %Przyspieszenie grawitacyjne na powierzchni Ziemii [ m / s^2 ]
 promienZiemii = 6360000; %promieñ Ziemii [ m ]
 kWymianyCiepla = 0.5; %Wspó³czynnik wymiany ciep³a pomiêdzy kopert¹ balonu, a otoczeniem
+Ppb = 3.1415 * (19/2)^2; %pole przekroju balonu [ m^2 ]
+Cd = 0.5; %Wspó³czynnik oporu aerodynamicznego dla idelnej sfery [ ]
 
 
 
