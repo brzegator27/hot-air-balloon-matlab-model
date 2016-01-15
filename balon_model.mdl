@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.103"
+    ComputedModelVersion    "1.107"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -37,9 +37,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Jakub"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Jan 02 08:34:40 2016"
-  RTWModifiedTimeStamp	  373623459
-  ModelVersionFormat	  "1.%<AutoIncrement:103>"
+  LastModifiedDate	  "Fri Jan 15 21:23:05 2016"
+  RTWModifiedTimeStamp	  374793783
+  ModelVersionFormat	  "1.%<AutoIncrement:107>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -142,7 +142,7 @@ Model {
 	  $ObjectID		  4
 	  Version		  "1.11.0"
 	  StartTime		  "0.0"
-	  StopTime		  "40000"
+	  StopTime		  "3600"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -159,8 +159,8 @@ Model {
 	  RelTol		  "1e-3"
 	  SolverMode		  "Auto"
 	  ConcurrentTasks	  off
-	  Solver		  "ode45"
-	  SolverName		  "ode45"
+	  Solver		  "ode113"
+	  SolverName		  "ode113"
 	  SolverJacobianMethodControl "auto"
 	  ShapePreserveControl	  "DisableAll"
 	  ZeroCrossControl	  "UseLocalSettings"
@@ -927,7 +927,7 @@ Model {
       Name		      "Fwypadkowa/masa [ m / s^2 ]"
       SID		      "38"
       Ports		      [2, 1]
-      Position		      [1075, 894, 1120, 941]
+      Position		      [1075, 889, 1120, 936]
       Inputs		      "*/"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -1277,7 +1277,7 @@ Model {
       Name		      "Scope11"
       SID		      "99"
       Ports		      [1]
-      Position		      [1000, 989, 1030, 1021]
+      Position		      [1075, 1009, 1105, 1041]
       Floating		      off
       Location		      [198, 91, 609, 388]
       Open		      off
@@ -1589,7 +1589,7 @@ Model {
       Ports		      [1]
       Position		      [760, 1349, 790, 1381]
       Floating		      off
-      Location		      [198, 91, 609, 388]
+      Location		      [403, 226, 814, 523]
       Open		      off
       NumInputPorts	      "1"
       List {
@@ -1682,18 +1682,12 @@ Model {
       Name		      "Sum2"
       SID		      "36"
       Ports		      [3, 1]
-      Position		      [900, 869, 960, 936]
+      Position		      [900, 864, 960, 936]
       ShowName		      off
       Inputs		      "|--+"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
-      Port {
-	PortNumber		1
-	Name			"sila wypadkowa [ N ]"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
     }
     Block {
       BlockType		      Sum
@@ -2120,7 +2114,7 @@ Model {
 	DstPort			2
       }
       Branch {
-	Points			[0, 65; 455, 0]
+	Points			[0, 260; 425, 0; 0, -185]
 	DstBlock		"Fwypadkowa/masa [ m / s^2 ]"
 	DstPort			2
       }
@@ -2147,7 +2141,7 @@ Model {
       SrcPort		      1
       Points		      [65, 0]
       Branch {
-	Points			[55, 0; 0, 50]
+	Points			[55, 0; 0, 45]
 	DstBlock		"Sum2"
 	DstPort			1
       }
@@ -2176,25 +2170,9 @@ Model {
 	DstPort			1
       }
       Branch {
-	Points			[55, 0; 0, -55]
+	Points			[55, 0; 0, -50]
 	DstBlock		"Sum2"
 	DstPort			3
-      }
-    }
-    Line {
-      Name		      "sila wypadkowa [ N ]"
-      Labels		      [0, 0; 0, 0]
-      SrcBlock		      "Sum2"
-      SrcPort		      1
-      Points		      [10, 0]
-      Branch {
-	DstBlock		"Fwypadkowa/masa [ m / s^2 ]"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, 105]
-	DstBlock		"Scope11"
-	DstPort			1
       }
     }
     Line {
@@ -2202,7 +2180,7 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "Fwypadkowa/masa [ m / s^2 ]"
       SrcPort		      1
-      Points		      [0, -5; 30, 0]
+      Points		      [30, 0]
       Branch {
 	Points			[0, 80]
 	DstBlock		"Scope10"
@@ -2748,12 +2726,26 @@ Model {
 	DstPort			2
       }
     }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      Points		      [45, 0]
+      Branch {
+	DstBlock		"Fwypadkowa/masa [ m / s^2 ]"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 125]
+	DstBlock		"Scope11"
+	DstPort			1
+      }
+    }
     Annotation {
       Position		      [995, 467]
     }
     Annotation {
       Name		      "Fwypadkowa =\nFwyp - Fciezkosci \n- sila oporu powietrza"
-      Position		      [935, 929]
+      Position		      [935, 964]
     }
     Annotation {
       Position		      [625, 1282]
